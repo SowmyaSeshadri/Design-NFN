@@ -1,0 +1,40 @@
+$primary-color:#0EC5B5;
+$helvetica:'Roboto', sans-serif;
+.container{
+  text-align: center;
+  font-family: $helvetica;
+}
+.image img {
+    min-width: 140px;
+}
+#content{
+
+  margin-top: 80px;
+  margin-left: 15%;
+}
+.main{
+    display: flex;
+    margin-top: 10px;
+}
+.imageText{
+margin-left: 50px;
+text-align: left;
+@media screen and (max-width: 769px){
+  margin-left: 30px;
+}
+}
+.head1{
+  text-decoration: none;
+    font-size: 25px;
+}
+.head2{
+  width:75%;
+  margin-top: 10px;
+}
+.head3{
+  font-size: 12px;
+  margin-top: 20px;
+}
+.head1 a:hover{
+  text-decoration: none;
+}
