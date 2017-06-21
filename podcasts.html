@@ -1,59 +1,49 @@
 <html>
+
 <head>
-  <title>NFN-Podcasts</title>
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <meta name="viewport" content="width=device-width; initial-scale = 1.0;
-maximum-scale=1.0";user-scalable=0; />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>NFN-Podcasts</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta name="viewport" content="width=device-width; initial-scale = 1.0;
+maximum-scale=1.0" ;user-scalable=0; />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
 </head>
+
 <body>
-  <div class="container">
+    <div class="container">
 
+        <div class="row" id="content">
 
-    <div class="row" id="content">
-
-      <!-- <div class="main">
-        <div class="image"><img src="image.png"></div>
-        <div class="imageText">
-          <p class="head1">Hello,My name comes here</p>
-          <p class="head2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          <span class="tag is-light">#CategoryName</span>
         </div>
 
-    </div> -->
-  </div>
-
-
-  </div>
+    </div>
 </body>
 <script>
-$(document).ready(function(){
-  $.ajax({
-// url : "https://sheetsu.com/apis/v1.0/28d773dc2589/sheets/Books?api_key=dTnYXY69bexDx2J8SzyU:7xtCz7paLJEgpUuzPtocjEYVWuxdVn8b3mFv6kuJ",
-url :"https://api.myjson.com/bins/1cdkvj",
-  type : "GET",
-  success : function(result){
-    data = result
-    console.log(data)
+    $(document).ready(function() {
+        $.ajax({
+            // url : "https://sheetsu.com/apis/v1.0/28d773dc2589/sheets/Books?api_key=dTnYXY69bexDx2J8SzyU:7xtCz7paLJEgpUuzPtocjEYVWuxdVn8b3mFv6kuJ",
+            url: "https://api.myjson.com/bins/1cdkvj",
+            type: "GET",
+            success: function(result) {
+                data = result
+                console.log(data)
 
-    $.each(data,function(j,k){
-        var cat = k.Category.split(",")
-        console.log(k.Category.split(","))
-        // console.log(k.Category.split(",")[0])
-      $("#content").append("<div class='main'><div class='image hidden-xs hidden-sm'><a href='https://www.google.co.in/'><img src='image.png'></a></div><div class='imageText'><p class='head1'><a href='https://www.google.co.in/'>" +k["Podcast\ Name"]+"</a></p><p class='head2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> <p class='head3'><span class='tag is-dark'>"+k.Category+"</span><p></div></div><hr width='80%' align='left'>")
+                $.each(data, function(j, k) {
+                    var cat = k.Category.split(",")
+                        // console.log(k.Category.split(",")[0])
+                    $("#content").append("<div class='main'><div class='image hidden-xs hidden-sm'><a href='https://www.google.co.in/'><img src='image.png'></a></div><div class='imageText'><p class='head1'><a href='https://www.google.co.in/'>" + k["Podcast\ Name"] + "</a></p><p class='head2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> <p class='head3'><span class='tag is-dark'>" + k.Category + "</span><p></div></div><hr width='80%' align='left'>")
 
-      })
-    }
+                })
+            }
 
-})
-})
-
+        })
+    })
 </script>
+
 </html>
