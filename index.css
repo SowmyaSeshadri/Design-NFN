@@ -3,7 +3,8 @@
   font-family: "Roboto", sans-serif; }
 
 .image img {
-  min-width: 140px; }
+  min-width: 140px;
+  max-height: 140px; }
 
 #content {
   margin-top: 80px;

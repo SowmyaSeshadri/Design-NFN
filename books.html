@@ -25,7 +25,7 @@ maximum-scale=1.0" ;user-scalable=0; />
     $(document).ready(function() {
         $.ajax({
             // url : "https://sheetsu.com/apis/v1.0/28d773dc2589/sheets/Books?api_key=dTnYXY69bexDx2J8SzyU:7xtCz7paLJEgpUuzPtocjEYVWuxdVn8b3mFv6kuJ",
-            url: "https://api.myjson.com/bins/ke7fz",
+            url: "https://api.myjson.com/bins/yghiv",
             type: "GET",
             success: function(result) {
                 data = result
@@ -33,7 +33,7 @@ maximum-scale=1.0" ;user-scalable=0; />
 
                 $.each(data, function(j, k) {
                     // console.log(k.Category.split(",")[0])
-                    $("#content").append("<div class='main'><div class='image  hidden-xs hidden-sm'><a href='https://www.google.co.in/'><img src='image.png'></a></div><div class='imageText'><p class='head1'><a href='https://www.google.co.in/'>" + k.Book + "</a></p><p class='head2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> <p class='head3'><span class='tag is-dark'>" + k.Category + "</span><p></div></div><hr width='80%' align='left'>")
+                    $("#content").append("<div class='main'><div class='image  hidden-xs hidden-sm'><a href=''><img src='"+ k.attachment +"' onerror= this.src='image.png'></a></div><div class='imageText'><p class='head1'><a href=''>" + k.name + "</a></p><p class='head2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p> <p class='head3'></p></div></div><hr width='80%' align='left'>")
 
                 })
             }
