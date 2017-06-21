@@ -3,7 +3,7 @@
   <title>NFN-Videos</title>
   <link rel="stylesheet" type="text/css" href="index.css">
   <meta name="viewport" content="width=device-width; initial-scale = 1.0;
-maximum-scale=1.0" />
+maximum-scale=1.0";user-scalable=0; />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
@@ -46,7 +46,7 @@ url :"https://api.myjson.com/bins/11nrzj",
         // console.log(k.Category.split(",")[0]
           var cat = k.Category.split(", ")
           console.log(cat)
-        $("#content").append("<div class='main'><div class='image'><a href='"+k.Link+"'><img src='image.png'></a></div><div class='imageText'><p class='head1'><a href='"+k.Link+"'>" +k["Channel/YouTuber"]+"</a></p><p class='head2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p><p class='head3'><span class='tag is-dark'>"+cat+ "</span></p></div></div><hr width='80%' align='left'>")
+        $("#content").append("<div class='main'><div class='image  hidden-xs hidden-sm'><a href='"+k.Link+"'><img src='image.png'></a></div><div class='imageText'><p class='head1'><a href='"+k.Link+"'>" +k["Channel/YouTuber"]+"</a></p><p class='head2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p><p class='head3'><span class='tag is-dark'>"+cat+ "</span></p></div></div><hr width='80%' align='left'>")
 
       })
 }
